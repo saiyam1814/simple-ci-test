@@ -13,7 +13,7 @@ spec:
         app: hello-world
     spec:
       containers:
-        - image: saiyam1814/simple-ci-test:latest
+        - image: saiyam911/simple-ci-test:latest
           name: hello-world
       imagePullSecrets:
         - name: regcred
