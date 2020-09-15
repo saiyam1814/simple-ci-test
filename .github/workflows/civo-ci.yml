@@ -50,6 +50,8 @@ jobs:
         run: sed -i "s/CLUSTER_ID/`civo k3s show github-ci-${{github.sha}} -o custom -f ID`/" k8s.yml
       - name: Deploy our app to the cluster
         run: kubectl apply -f k8s.yml
+      - name: cat
+        run: cat ~/.kube/config  
       - name: Wait for the deployment to be ready
         run: >
           i=0;
