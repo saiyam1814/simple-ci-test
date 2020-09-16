@@ -16,7 +16,7 @@ spec:
         - image: saiyam911/simple-ci-test:latest
           name: hello-world
       imagePullSecrets:
-        - name: regcred
+        - name: regcred 
 ---
 apiVersion: v1
 kind: Service
