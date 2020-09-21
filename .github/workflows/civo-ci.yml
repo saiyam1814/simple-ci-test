@@ -61,7 +61,9 @@ jobs:
             sleep 1;
           done
       - name: output
-        run: civo k3s show github-ci-${{github.sha}} -o custom -f ID    
+        run: civo k3s show github-ci-${{github.sha}} -o custom -f ID
+      - name: sleeping
+        run: sleep 100;      
       - name: Curl our endpoint and test that the output matches
         run: curl -s http://hello-world.`civo k3s show github-ci-${{github.sha}} -o custom -f ID`.k8s.civo.com | grep "Hello world"
   
